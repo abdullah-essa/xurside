@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.xurside.adrianapp.activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewAppLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="145dp"
+        android:src="@drawable/logo"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/textViewAppWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="@string/app_welcome_message"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="42sp"
+        app:fontFamily="cursive" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="24sp"
+        app:fontFamily="cursive" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--login layout-->
+
+        <LinearLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+            <!--invisible-->
+
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusableInTouchMode="true"
+                android:hint="@string/username_placeholder"
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/password_placeholder"
+                android:inputType="textPassword"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/login_wrod"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:id="@+id/textViewForgotPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/forgot_password_link"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/colorPrimaryDark"
+                    app:fontFamily="sans-serif-condensed" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--forgot password-->
+        <LinearLayout
+            android:id="@+id/forgetPasswordLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="invisible">
+
+            <EditText
+                android:id="@+id/editTextForgotPassEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center_vertical|center"
+                android:hint="@string/email_placeholder"
+                android:inputType="textEmailAddress" />
+
+            <Button
+                android:id="@+id/buttonForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:text="@string/submit_recover_password"
+                android:textColor="@android:color/background_light" />
+
+            <TextView
+                android:id="@+id/textViewLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/btn_login_wrod"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <!--Forget Your Password ? Click Here!-->
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_links"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textViewRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/textViewRegister"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/colorPrimaryDark"
+            app:fontFamily="sans-serif-condensed" />
+    </LinearLayout>
+
+    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/adView"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:layout_marginTop="40dp"-->
+    <!--ads:adSize="SMART_BANNER"-->
+    <!--ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
+
+</LinearLayout>

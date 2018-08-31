@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/padding"
+    android:paddingStart="@dimen/padding">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                android:id="@+id/textViewVideoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/mdtp_dark_gray"
+                android:textStyle="normal|italic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="3dp"
+                    android:text="@string/textview_deliver_date"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewDeliverDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/vids_attrs_background"
+                    android:padding="3dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="3dp"
+                    android:text="@string/textview_sent"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textViewSent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/vids_attrs_background"
+                    android:padding="3dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="3dp">
+
+                <ImageButton
+                    android:id="@+id/buttonWatchVideo"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_video_watch_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/buttonEditVideo"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_video_edit_24dp"
+                    tools:ignore="ContentDescription" />
+
+                <ImageButton
+                    android:id="@+id/buttonDeleteVideo"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/buttonDelete_video_desc"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_video_delete_24dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

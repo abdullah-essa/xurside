@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.xurside.adrianapp.activities.ProfileActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/app_message"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="24sp"
+            app:fontFamily="cursive" />
+
+        <TextView
+            android:id="@+id/textViewResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/holo_red_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewUploadedString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewUploadedString"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewUploadedQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="24sp"
+                app:fontFamily="cursive" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewAllowedQtyString"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewAllowedQtyString"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewAllowedQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="24sp"
+                app:fontFamily="cursive" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/registerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <EditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/username_placeholder"
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Email_placeholder"
+                android:inputType="textEmailAddress"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/editTextFullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusableInTouchMode="true"
+                android:hint="@string/fullname_placeholder"
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/editTextContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:focusableInTouchMode="true"
+                android:hint="@string/contact_placeholder"
+                android:inputType="textPersonName"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/password_placeholder"
+                android:inputType="textPassword"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/editTextConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/confirm_password_placeholder"
+                android:inputType="textPassword"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <Button
+                android:id="@+id/buttonUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/colorPrimary"
+                android:text="@string/buttonUpdate"
+                android:textColor="@color/mdtp_white" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

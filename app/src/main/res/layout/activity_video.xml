@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.xurside.adrianapp.activities.VideoActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="normal|italic" />
+
+
+        <TextView
+            android:id="@+id/textViewResponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light" />
+
+        <LinearLayout
+            android:id="@+id/layout_video_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_5dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start"
+                android:text="@string/label_video_title"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/vid_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/placeholder_video_title"
+                android:inputType="text"
+                android:textColorLink="@color/colorPrimaryDark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="start"
+                android:text="@string/label_video_emails"
+                android:textStyle="normal|bold" />
+
+            <EditText
+                android:id="@+id/editTextVideoMails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:hint="@string/placeholder_video_emails"
+                android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+                android:maxLines="6"
+                android:minLines="3" />
+
+            <!--<EditText-->
+            <!--android:id="@+id/editTextVideoEmail11"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="@string/placeholder_video_emails"-->
+            <!--android:inputType="textEmailAddress"-->
+            <!--android:textColorLink="@color/colorPrimaryDark" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonPickDate"
+                    android:layout_width="176dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="buttonPickDate"
+                    android:text="@string/button_select_date"
+                    android:textColor="@color/mdtp_white" />
+
+                <EditText
+                    android:id="@+id/editTextDeliveryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/placeholder_video_date"
+                    android:inputType="date" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="@dimen/padding_5dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="btn_update"
+                    android:text="@string/buttonUpdate"
+                    android:textColor="@color/mdtp_white"
+                    tools:ignore="ButtonStyle" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="btn_cancel"
+                    android:text="@string/button_cancel"
+                    android:textColor="@color/mdtp_white"
+                    tools:ignore="ButtonStyle" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!-- Watch video -->
+        <RelativeLayout
+            android:id="@+id/layout_video_watch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <ProgressBar
+                android:id="@+id/ProgressBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/app_bar_vertical_margin" />
+
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/footer"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+        <!--android:id="@+id/adView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--ads:adSize="SMART_BANNER"-->
+        <!--ads:adUnitId="ca-app-pub-3940256099942544/6300978111" />-->
+
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+</ScrollView>

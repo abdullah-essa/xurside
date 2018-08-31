@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xurside.adrianapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.VideosActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <tools:validation testUrl="https://www.xurside.com/watch" />
+
+            <intent-filter android:label="@string/title_activity_videos">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.xurside.com"
+                    android:pathPrefix="/watch"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Home Page"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.UploadVideoActivity"
+            android:label="@string/title_activity_upload"
+            android:parentActivityName=".activities.VideosActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.VideosActivity" />
+        </activity>
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName=".activities.VideosActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.VideosActivity" />
+        </activity>
+        <activity
+            android:name=".activities.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".activities.VideosActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.VideosActivity" />
+        </activity>
+        <activity android:name=".activities.RegisterActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.VideoRecordActivity"
+            android:label="@string/title_activity_video_record"
+            android:parentActivityName=".activities.VideosActivity">
+
+            <!-- The meta-data element is needed for versions lower than 4.1 -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.VideosActivity" />
+        </activity>
+
+        <service
+            android:name=".network.MyService"
+            android:enabled="true"
+            android:exported="false"></service>
+    </application>
+
+</manifest>
