@@ -1,2 +1,2 @@
-# xurside
-Simple Android app for uploading videos to a server
+# Adrianapp
+Android app for uploading videos and managing users accounts
